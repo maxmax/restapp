@@ -1,6 +1,8 @@
 const router = require('express').Router();
 
 router.use('/users', require('../controller/users'));
+router.use('/movies', require('../controller/movies'));
+router.use('/taxonomy', require('../controller/taxonomy'));
 
 router.use(function(err, req, res, next){
 if(err.name === 'ValidationError'){
